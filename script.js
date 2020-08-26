@@ -8,9 +8,9 @@ function mkImg() {
   const status_text_value = document.getElementById("status_text_value").value;
   const status_textsize_value = document.getElementById("status_textsize_value").value;
   const img_dict = {
-      "o": "./img/OK.png",
-      "c": "./img/NO.png",
-      "n": "./img/Cau.png"
+      "o": "/img/OK.png",
+      "c": "/img/NO.png",
+      "n": "/img/Cau.png"
   };
   img.src = img_dict[ico_type];
   head_title.innerHTML = title_value;
