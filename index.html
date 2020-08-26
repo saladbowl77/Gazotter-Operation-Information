@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>運行情報がぞったー</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" href="/icon/apple-touch-icon-152x152.png">
+    <meta name="theme-color" content="lightskyblue">
+    
+    <link rel="manifest" href="/manifest.json">
+    <!-- ファビコン -->
+    <link rel="icon" href="/favicon.ico">
+    <!-- スマホ用アイコン -->
+    <link rel="apple-touch-icon" type="image/png" href="icon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icon/icon-192x192.png">
+    <!-- Windows用アイコン -->
+    <meta name="application-name" content="文書画像ったー"/>
+    <meta name="msapplication-TileColor" content="lightskyblue"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta property='og:title' content='運行情報がぞったー'>
+    <meta property='og:description' content='運行情報のあれみたいな画像を生成するジェネレーターです'>
+    <meta property='og:url' content='oi.gazotter.space'>
+    <meta property='og:site_name' content='運行情報がぞったー'>
+    <meta property='og:type' content='website'>
+  </head>
+  <body>
+    <header>
+     <section id="header_wrap">
+      <div id="side">
+        <div id="link" class="dp-none">
+          <h2>運行情報がぞったー</h2>
+          <ul id="app">
+            <li><a href="/">トップ</a></li>
+            <li><a href="/how">使い方</a></li>
+          </ul>
+          <ul id="about">
+            <li><a href="https://saladbowl.work">開発者HP</a></li>
+            <li><a href="https://blog.saladbowl.work">開発者ブログ</a></li>
+            <li><a href="https://twitter.com/saladbowl_sub">開発者Twitter</a></li>
+          </ul>
+          <div id="swipe"></div>
+        </div>
+      </div>
+      <div id="s_bg" class="dp-none"></div>
+      <section id="header_main">
+        <div id="open_bt"><span id="open"><span></span><span></span><span></span></span></div>
+        <h1><a href="/">運行情報がぞったー</a></h1>
+      </section>
+    </section>
+    </header>
+    <main>
+    <div id="settings">
+        <p>
+        <span>タイトル</span>
+          <input type="text" id="title_value" onChange="mkImg()" value="名前">
+        </p>
+        <p>
+          <span>状態</span>
+          <input type="text" id="status_text_value" onChange="mkImg()" value="通常運転">
+        </p>
+        <p>
+          <span>状態の文字サイズ</span>
+          <input type="number" id="status_textsize_value" onChange="mkImg()" value="30" inputmode="numeric">
+        </p>
+        <p>
+          <span>状態のアイコン</span>
+          <select id="ico_type" onChange="mkImg()">
+            <option value="o">まる</option>
+            <option value="n">さんかく</option>
+            <option value="c">ばつ</option>
+          </select>
+        </p>
+        <p>↓黒枠内が画像なので長押しや右クリックで保存できます。</p>
+      </div>
+      <div id="wrap_all">
+        <div id="capture">
+          <div id="head">
+            <p id="head_title"></p>
+          </div>
+          <div id="main">
+            <div id="status_icon">
+              <img src="OK.png" alt="" id="ico_img">
+            </div>
+            <div id="status_text"></div>
+          </div>
+        </div>
+        <img src="" alt="" id="canvas-image">
+      </div>
+      <div>
+        <h2>使い方</h2>
+      </div>
+    </main>
+    <footer id="top">
+      <p>がぞったー / <a href="https://twitter.com/saladbowl">さらだぼぉる</a></p>
+    </footer>
+    <script src="sidebar.js"></script>
+    <script src="html2canvas.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
