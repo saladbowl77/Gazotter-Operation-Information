@@ -130,3 +130,4 @@ input[type="number"] {border: 0; padding: 0 10px; width:  calc(40% - 33px); marg
   0% {opacity: 1;}
   100% {opacity: 0;}
 }
+.nones {opacity: 0;}
